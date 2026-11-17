@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cardio3D</string>
+
+    <!-- Header & Telemetry -->
+    <string name="telemetry_bpm_unit">уд/мин</string>
+    <string name="phase_atrial_systole">Систола предсердий</string>
+    <string name="phase_atrial_systole_desc">Предсердия сжимаются, проталкивая кровь через клапаны в желудочки</string>
+    <string name="phase_ventricular_systole">Систола желудочков</string>
+    <string name="phase_ventricular_systole_desc">Желудочки мощно выбрасывают кровь в аорту и лёгочный ствол</string>
+    <string name="phase_diastole">Диастола</string>
+    <string name="phase_diastole_desc">Камеры расслаблены; предсердия наполняются кровью из вен</string>
+
+    <!-- Blood Legend -->
+    <string name="legend_venous">Венозная</string>
+    <string name="legend_arterial">Артериальная</string>
+
+    <!-- Controls -->
+    <string name="control_heart_rate">Частота сокращений</string>
+    <string name="control_transparency">Прозрачность стенок</string>
+    <string name="mode_solid">Снаружи</string>
+    <string name="mode_translucent">Стекло</string>
+    <string name="mode_cutaway">Срез</string>
+
+    <!-- Rate Presets -->
+    <string name="preset_bradycardia">Брадикардия</string>
+    <string name="preset_rest">Покой</string>
+    <string name="preset_exercise">Нагрузка</string>
+    <string name="preset_tachycardia">Тахикардия</string>
+
+    <!-- Action Descriptions -->
+    <string name="cd_play_pause">Пауза или воспроизведение симуляции</string>
+    <string name="cd_toggle_labels">Показать или скрыть анатомические подписи</string>
+    <string name="cd_reset_camera">Сбросить угол обзора 3D-модели</string>
+    <string name="cd_close_info">Закрыть справку о структуре</string>
+    <string name="cd_expand_controls">Свернуть или развернуть панель управления</string>
+    <string name="action_reset_view">Сброс</string>
+    <string name="action_labels">Метки</string>
+    <string name="hint_drag_rotate">Вращайте одним пальцем • Масштаб двумя</string>
+
+    <!-- Anatomical Structures -->
+    <string name="struct_ra_name">Правое предсердие</string>
+    <string name="struct_ra_short">ПП</string>
+    <string name="struct_ra_desc">Принимает венозную кровь из верхней и нижней полых вен во время диастолы. В систолу предсердий (зубец P) выталкивает её через трикуспидальный клапан в правый желудочек.</string>
+
+    <string name="struct_la_name">Левое предсердие</string>
+    <string name="struct_la_short">ЛП</string>
+    <string name="struct_la_desc">Наполняется обогащённой кислородом кровью из четырёх лёгочных вен в фазу диастолы. При сокращении направляет кровь через митральный клапан в левый желудочек.</string>
+
+    <string name="struct_rv_name">Правый желудочек</string>
+    <string name="struct_rv_short">ПЖ</string>
+    <string name="struct_rv_desc">Охватывает сердце спереди в форме полумесяца. Во время систолы желудочков (QRS) выталкивает венозную кровь через лёгочный клапан в лёгочный ствол к лёгким.</string>
+
+    <string name="struct_lv_name">Левый желудочек</string>
+    <string name="struct_lv_short">ЛЖ</string>
+    <string name="struct_lv_desc">Самая мощная камера, формирующая верхушку сердца. При систоле скручивается и сжимается, создавая высокое давление для выброса алой крови в аорту.</string>
+
+    <string name="struct_aorta_name">Аорта и дуга аорты</string>
+    <string name="struct_aorta_short">Аорта</string>
+    <string name="struct_aorta_desc">Главная артерия большого круга кровообращения. Эластичные стенки расширяются во время выброса (эффект Виндкесселя), поддерживая пульсирующий кровоток к органам.</string>
+
+    <string name="struct_pa_name">Лёгочный ствол</string>
+    <string name="struct_pa_short">Лёг. ствол</string>
+    <string name="struct_pa_desc">Несёт венозную кровь из правого желудочка, разделяясь на правую и левую лёгочные артерии для газообмена в лёгких.</string>
+
+    <string name="struct_vc_name">Полые вены</string>
+    <string name="struct_vc_short">Полые вены</string>
+    <string name="struct_vc_desc">Верхняя и нижняя полые вены доставляют бедную кислородом кровь от всего организма в правое предсердие в фазу диастолы.</string>
+
+    <string name="struct_pv_name">Лёгочные вены</string>
+    <string name="struct_pv_short">Лёг. вены</string>
+    <string name="struct_pv_desc">Четыре вены (левые и правые), возвращающие свежую артериальную кровь из лёгких в левое предсердие.</string>
+
+    <string name="struct_tricuspid_name">Трикуспидальный клапан</string>
+    <string name="struct_tricuspid_short">Трикусп.</string>
+    <string name="struct_tricuspid_desc">Трёхстворчатый клапан между правым предсердием и желудочком. Открывается для наполнения желудочка и плотно захлопывается при его сокращении.</string>
+
+    <string name="struct_mitral_name">Митральный клапан</string>
+    <string name="struct_mitral_short">Митральн.</string>
+    <string name="struct_mitral_desc">Двустворчатый клапан между левым предсердием и левым желудочком. Пропускает артериальную кровь вниз и предотвращает обратный ток в систолу.</string>
+
+    <string name="struct_aortic_valve_name">Аортальный клапан</string>
+    <string name="struct_aortic_valve_short">Аорт. кл.</string>
+    <string name="struct_aortic_valve_desc">Трёхстворчатый полулунный клапан на выходе из левого желудочка. Распахивается при систоле желудочков и блокирует возврат крови в диастолу.</string>
+
+    <string name="struct_pulm_valve_name">Лёгочный клапан</string>
+    <string name="struct_pulm_valve_short">Лёг. кл.</string>
+    <string name="struct_pulm_valve_desc">Полулунный клапан на границе правого желудочка и лёгочного ствола, обеспечивающий однонаправленный выброс венозной крови к лёгким.</string>
+</resources>
