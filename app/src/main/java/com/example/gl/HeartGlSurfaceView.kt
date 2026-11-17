@@ -90,7 +90,7 @@ fun HeartGlSurfaceView(
                                 val y = event.getY(idx)
                                 val dx = x - lastX
                                 val dy = y - lastY
-                                renderer.addRotationDelta(dx * 0.35f, dy * 0.35f)
+                                renderer.addRotationDelta(-dx * 0.35f, dy * 0.35f)
                                 lastX = x
                                 lastY = y
                             }

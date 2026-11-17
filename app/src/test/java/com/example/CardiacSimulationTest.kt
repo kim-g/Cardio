@@ -153,4 +153,30 @@ class CardiacSimulationTest {
             assertTrue("S-dip at $testBpm BPM must reach full depth (<= -0.22, got $minS)", minS <= -0.22f)
         }
     }
+
+    @Test
+    fun phaseDurations_scaleNonProportionallyAcrossHeartRates() {
+        val brady = CardiacCycleEngine.computePhaseDurations(45)
+        val rest = CardiacCycleEngine.computePhaseDurations(72)
+        val exercise = CardiacCycleEngine.computePhaseDurations(125)
+        val tachy = CardiacCycleEngine.computePhaseDurations(165)
+
+        // Bradycardia: systole stays identical to normal (72 BPM), while diastole grows markedly
+        assertEquals(rest.atrialSystoleSec, brady.atrialSystoleSec, 0.001f)
+        assertEquals(rest.ventricularSystoleSec, brady.ventricularSystoleSec, 0.001f)
+        assertTrue("Bradycardia diastole must be much longer than rest", brady.diastoleSec > rest.diastoleSec * 1.9f)
+
+        // Exercise & Tachycardia: diastole shrinks dramatically more than systole
+        val restSystole = rest.atrialSystoleSec + rest.ventricularSystoleSec
+        val tachySystole = tachy.atrialSystoleSec + tachy.ventricularSystoleSec
+        val systoleReductionRatio = (restSystole - tachySystole) / restSystole
+        val diastoleReductionRatio = (rest.diastoleSec - tachy.diastoleSec) / rest.diastoleSec
+
+        assertTrue(
+            "Diastole reduction ($diastoleReductionRatio) must far exceed systole reduction ($systoleReductionRatio)",
+            diastoleReductionRatio > systoleReductionRatio * 2.0f
+        )
+        assertTrue("Exercise diastole must still remain positive", exercise.diastoleSec > 0.10f)
+        assertTrue("Tachycardia diastole must still remain positive", tachy.diastoleSec > 0.06f)
+    }
 }
